@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.dark-blue{
+    background-color: #12172B;
+}
+.gray{
+    background-color: #E6E6E6;
+}
+.yellow{
+    background-color: #F09400;
+}
+.text-yellow{
+    color: #F29600;
+}
+.px-8{
+    padding: 0 5rem;
+}
+.nav-link{
+    font-size: 19px !important;
+}
+.navbar-toggler{
+    border: 0px !important;
+}
+#banner{
+    background: url(assets/images/banner.svg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.card{
+    height: 32rem;
+    width: 22rem;
+    background-color: #E6E6E6;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.578);
+    border: 0px;
+}
+@media (max-width : 575.98px){
+    .logo{
+        width: 150px;
+    }
+}
+
