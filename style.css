@@ -34,13 +34,15 @@ body{
     align-items: center;
 }
 .card{
-    height: 32rem;
-    width: 22rem;
+    height: 35rem;
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.578);
     border: 0px;
 }
 .right-icon{
     width: 25px;
+}
+.accordion{
+    border: 0px;
 }
 .accordion-button::after{
     background: url(assets/images/plus.svg);
@@ -63,11 +65,19 @@ body{
     width: 30px;
     height: 30px;
 }
-
+.accordion-item:first-of-type .accordion-button{
+    border-radius: 10px;
+}
+.accordion-item:last-of-type .accordion-button.collapsed{
+    border-radius: 10px;
+}
 .accordion-body{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border: 3px solid #12172B;
+    border-top: 0px;
+    position: relative;
+    bottom: 10px;
 }
 .yellow-line{
     border-top: 2px solid #F09400;
