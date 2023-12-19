@@ -213,7 +213,55 @@ body {
     display: flex; /* Ensures the pills are in a row */
     justify-content: space-between; /* Adjusts spacing between pills */
 }
+#footer a {
+    text-decoration: none;
+    color: inherit;
+  }
 
+@media (min-width: 992px) { /* Adjust for the breakpoint at which the navbar expands */
+    .navbar-center-wrapper {
+        display: flex;
+        justify-content: space-between; /* Align items to start and end of the container */
+        align-items: center;
+        max-width: 1200px; /* Increased to 1200px for more width */
+        margin: 0 auto; /* Center the content */
+        width: 100%; /* Use the full width of the container */
+    }
+  
+    .navbar-brand {
+        order: 1; /* Logo comes first */
+    }
+  
+    #navbarNav {
+        order: 2; /* Navigation items come second */
+        flex-grow: 1; /* Allows nav to grow as needed */
+        flex-basis: auto; /* Adjust basis as per the actual width of the nav */
+        justify-content: center; /* Center the navigation links */
+    }
+  
+    .navbar-collapse {
+        flex-grow: 0; /* Prevents the collapse from taking up unnecessary space */
+    }
+  
+    .navbar form {
+        order: 3; /* Form (login/signup buttons) comes last */
+        flex-grow: 0; /* Prevent form from growing too much */
+    }
+  
+    .navbar form .btn {
+        padding: 0.375rem 0.75rem; /* Bootstrap's default padding for buttons */
+        margin-left: 0.5rem; /* Ensure some space between the buttons */
+    }
+
+    /* If you have specific classes for the buttons, you can add more padding like this: */
+    .btn.yellow,
+    .btn.btn-outline-primary {
+        padding: 0.5rem 1rem; /* Increase padding for better spacing */
+        /* Adjust the padding as needed to prevent the buttons from squishing */
+    }
+}
+
+  
 /* tablet screens */
 @media (max-width: 1025px) {
     #pills-tab{
