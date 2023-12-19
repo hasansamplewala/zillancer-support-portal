@@ -167,7 +167,10 @@ body {
 .overview-card {
     height: 40rem;
 }
-
+.nav-link.active-link {
+    color: #000; /* Dark color */
+    font-weight: bold;
+  }
 
 
 
