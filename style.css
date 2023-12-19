@@ -88,6 +88,13 @@ body {
     height: 30px;
 }
 
+/* Custom CSS */
+
+
+/* Optional: Adjust padding to ensure the line is not too far from text */
+.nav-link {
+    padding-bottom: .5rem; /* Or whatever value suits your design */
+}
 
 .accordion-item:first-of-type .accordion-button {
     border-radius: 10px;
@@ -171,11 +178,41 @@ body {
     height: 40rem;
 }
 .nav-link.active-link {
-    color: #000; /* Dark color */
-    font-weight: bold;
+    background-color: transparent; /* Clear any background */
+    border-bottom: 3px solid #F09400; /* Underline Effect */
+    border-radius: 0; /* Straight edges */
+    color: #000; /* Black text */
   }
 
+/* nav link for pricing section */
+/* Styles for nav-pills */
+.nav-pills .nav-link {
+    margin-right: 5px; /* Adjust the margin as needed */
+    border: none;
+    border-radius: 0; /* Removes the rounded corners */
+    background-color: transparent; /* Transparent background */
+    color: #000; /* Text color */
+    padding-bottom: 5px; /* Adjust padding to align the underline */
+}
 
+/* Styles for the active state of the nav-pills */
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+    color: #000; /* Text color for active state */
+    background-color: transparent; /* Transparent background for active state */
+    border-bottom: 3px solid #F09400; /* Underline color */
+}
+
+/* You may need to adjust the padding and font-size to match your design */
+.nav-pills .nav-link {
+    padding: 10px 15px; /* Padding around the text */
+    font-size: 16px; /* Font size */
+}
+
+/* Additional styling to ensure the pills are inline and spaced correctly */
+.nav-pills {
+    display: flex; /* Ensures the pills are in a row */
+    justify-content: space-between; /* Adjusts spacing between pills */
+}
 
 /* tablet screens */
 @media (max-width: 1025px) {
