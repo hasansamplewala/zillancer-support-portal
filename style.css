@@ -1,31 +1,39 @@
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-.dark-blue{
+
+.dark-blue {
     background-color: #12172B;
 }
-.gray{
+
+.gray {
     background-color: #E6E6E6;
 }
-.yellow{
+
+.yellow {
     background-color: #F09400;
 }
-.text-yellow{
+
+.text-yellow {
     color: #F29600;
 }
-.px-8{
+
+.px-8 {
     padding: 0 5rem;
 }
-.nav-link{
+
+.nav-link {
     font-size: 19px !important;
 }
-.navbar-toggler{
+
+.navbar-toggler {
     border: 0px !important;
 }
-#banner{
+
+#banner {
     background: url(assets/images/banner.svg);
     background-size: cover;
     background-position: center;
@@ -33,45 +41,60 @@ body{
     display: flex;
     align-items: center;
 }
-.card{
+
+.banner-image {
+    display: none;
+}
+
+.card {
     height: 35rem;
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.578);
     border: 0px;
 }
-.right-icon{
+
+.right-icon {
     width: 25px;
 }
-.accordion{
+
+.accordion {
     border: 0px;
 }
-.accordion-button::after{
+
+.accordion-button::after {
     background: url(assets/images/plus.svg);
     width: 30px;
     height: 32px;
 }
-.accordion-button{
+
+.accordion-button {
     background-color: #12172B;
     color: #fff;
 }
-.accordion-button:focus{
-   box-shadow: none;
+
+.accordion-button:focus {
+    box-shadow: none;
 }
-.accordion-button:not(.collapsed){
+
+.accordion-button:not(.collapsed) {
     background-color: #12172B;
     color: #fff;
 }
+
 .accordion-button:not(.collapsed)::after {
     background: url(assets/images/Minus_Close.svg);
     width: 30px;
     height: 30px;
 }
-.accordion-item:first-of-type .accordion-button{
+
+.accordion-item:first-of-type .accordion-button {
     border-radius: 10px;
 }
-.accordion-item:last-of-type .accordion-button.collapsed{
+
+.accordion-item:last-of-type .accordion-button.collapsed {
     border-radius: 10px;
 }
-.accordion-body{
+
+.accordion-body {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border: 3px solid #12172B;
@@ -79,13 +102,173 @@ body{
     position: relative;
     bottom: 10px;
 }
-.yellow-line{
+
+.yellow-line {
     border-top: 2px solid #F09400;
     margin-top: 19px;
 }
-@media (max-width : 575.98px){
-    .logo{
+
+/* Add this new CSS to style the buttons according to the image */
+.btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #f0ad4e;
+}
+
+.btn-outline-warning {
+    color: #f0ad4e;
+    border-color: #f0ad4e;
+}
+
+/* This ensures that the buttons have rounded edges */
+.btn-warning,
+.btn-outline-warning {
+    border-radius: 20px;
+}
+
+/* This will remove the default box-shadow from the Bootstrap buttons when they are clicked */
+.btn-warning:focus,
+.btn-outline-warning:focus {
+    box-shadow: none;
+}
+
+/* This will ensure there is no gap between the navbar items */
+.nav-item+.nav-item {
+    margin-left: 0;
+}
+
+/* This will remove the default underlines from the navbar links */
+.nav-link {
+    text-decoration: none;
+}
+
+/* This is to ensure the navbar items are displayed inline */
+.navbar-nav {
+    flex-direction: row;
+}
+
+/* This will ensure the buttons are aligned on the same line as the navbar links */
+.form-inline {
+    display: flex;
+    align-items: center;
+}
+
+/* Add space between accordion items */
+.accordion-item {
+    margin-bottom: 1rem;
+    /* Adjust the value as needed */
+}
+.card-title{
+    min-height: 60px; 
+}
+.card-text {
+    font-size: 1.2rem;
+}
+.overview-card {
+    height: 40rem;
+}
+
+
+
+
+/* tablet screens */
+@media (max-width: 1025px) {
+    #pills-tab{
+        
+        font-weight: 800 !important;
+    }
+
+    .limited-offer-button {
+        font-size: 0.78rem;
+        font-weight: 800;
+    }
+    .getting-started-h3 {
+        font-size: 1rem;
+    }
+    .getting-started-h5{
+        font-size: 1rem;
+    }
+    .overview-card {
+        height: 28rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* mobile screens */
+
+@media (max-width: 575.98px) {
+
+    .nav-link{
+        font-size: 0.8rem !important;
+     }
+    .hero {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .hero-h4 {
+        font-size: 1rem !important;
+    }
+
+    .fontsize-1rem {
+        font-size: 1rem !important;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .btn-warning,
+    .btn-outline-warning {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .form-inline {
+        flex-direction: column;
+    }
+}
+
+@media (max-width : 575.98px) {
+    .logo {
         width: 150px;
     }
 }
 
+/* Add this new media query for mobile screens */
+@media (max-width: 575.98px) {
+
+
+    /* Modify the banner styles for mobile */
+    #banner {
+        background: none;
+        /* Remove the background image from the content area */
+        text-align: left;
+        /* Center the text for mobile screens */
+        flex-direction: column;
+        /* Stack items vertically on mobile */
+        justify-content: center;
+        /* Center content vertically */
+        padding-bottom: 0;
+        /* Adjust padding as needed */
+    }
+
+    /* Add a new class for the image to be inserted below the text */
+    .banner-image {
+        display: block;
+        /* Make the image display as a block-level element */
+        width: 100%;
+        /* Full width */
+        height: auto;
+        /* Maintain aspect ratio */
+
+    }
+}
