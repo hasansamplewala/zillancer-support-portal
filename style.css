@@ -88,8 +88,44 @@ body {
     height: 30px;
 }
 
-/* Custom CSS */
 
+/* Adjustments for the Navbar flex container */
+.container-header {
+    display: flex; /* This turns it into a flex container */
+    justify-content: center; /* Horizontally centers flex items */
+    align-items: center; /* Vertically centers flex items */
+    flex-wrap: wrap; /* Allows flex items to wrap onto multiple lines */
+  }
+  
+  /* Media query for large screens */
+  @media (min-width: 992px) {
+    .container-header {
+      max-width: 1140px; /* Max-width for large screens */
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+  }
+  
+  /* Specific adjustments for the logo if necessary */
+  .navbar-brand img {
+    display: block; /* Makes sure the logo is a block-level element */
+    margin: auto; /* Centers the logo within its container */
+    /* Remove any specific top or bottom margin if it's pushing the logo up */
+  }
+
+  /* Mobile-specific styles */
+@media (max-width: 991px) {
+    .container-header.mobile-nav {
+      justify-content: space-between; /* Positions the logo and toggle button at opposite ends on mobile */
+    }
+    .navbar-brand,
+    .navbar-toggler {
+      flex-grow: 1; /* Allows the logo and toggle button to grow and use available space */
+    }
+  }
+  
+/* End of Adjustments for the Navbar flex container */
 
 /* Optional: Adjust padding to ensure the line is not too far from text */
 .nav-link {
@@ -218,15 +254,9 @@ body {
     color: inherit;
   }
 
+
+
 @media (min-width: 992px) { /* Adjust for the breakpoint at which the navbar expands */
-    .navbar-center-wrapper {
-        display: flex;
-        justify-content: space-between; /* Align items to start and end of the container */
-        align-items: center;
-        max-width: 1200px; /* Increased to 1200px for more width */
-        margin: 0 auto; /* Center the content */
-        width: 100%; /* Use the full width of the container */
-    }
   
     .navbar-brand {
         order: 1; /* Logo comes first */
@@ -314,7 +344,9 @@ body {
 
     .navbar-nav {
         flex-direction: column;
+        justify-content: space-between;
         margin-right: 0;
+        width: 100%;
     }
 
     .btn-warning,
