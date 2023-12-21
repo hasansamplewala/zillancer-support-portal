@@ -27,8 +27,8 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active-link" aria-current="page" href="#banner">Overview</a>
           </li>
@@ -45,12 +45,19 @@
             <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
+        <!-- Show only for mobile screens -->
+        <form class="d-flex form-mobile" role="search">
           <button class="btn me-2 custom-yellow-btn fw-semibold" type="button">Sign-up</button>
           <button class="btn custom-outline-btn fw-semibold" type="button">Login</button>
         </form>
 
       </div>
+      <!-- show only for screen larger then mobile -->
+      <!-- Outside collapse for larger screens -->
+<form class="d-flex form-desktop" role="search">
+  <button class="btn me-2 custom-yellow-btn fw-semibold" type="button">Sign-up</button>
+  <button class="btn custom-outline-btn fw-semibold" type="button">Login</button>
+</form>
     </div>
   </nav>
 
