@@ -84,7 +84,112 @@ body {
     height: 30px;
 }
 
+/* Custom styles for the yellow 'Sign-up' button */
+.custom-yellow-btn {
+  background-color: #F09400; /* The yellow background color */
+  border: none; /* Removes the border */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Adjust the padding to match your design */
+  border-radius: 30px; /* Rounded corners */
+  font-weight: 700; /* Makes the font bold */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
 
+/* Custom styles for the 'Login' button with outline */
+.custom-outline-btn {
+  background-color: transparent; /* Transparent background */
+  color: #F09400; /* Text color */
+  border: 2px solid #F09400; /* Border color */
+  padding: 8px 18px; /* Adjust the padding to match your design */
+  border-radius: 30px; /* Rounded corners */
+  font-weight: 700; /* Makes the font bold */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Ensure that the focus outline is removed for aesthetic purposes */
+.custom-yellow-btn:focus,
+.custom-outline-btn:focus {
+  box-shadow: none;
+}
+
+/* Define the hover effect for the 'Sign-up' button */
+.custom-yellow-btn:hover {
+  background-color: #cc7a00; /* Manually specified darker yellow color */
+}
+
+/* Define the hover effect for the 'Login' button */
+.custom-outline-btn:hover {
+  background-color: #F09400; /* Fills the button on hover */
+  color: white; /* White text on hover */
+}
+
+/* Button styling for the signup and login */
+/* Custom styles for the yellow 'Sign-up' button */
+.custom-yellow-btn {
+  background-color: #F09400; /* The yellow background color */
+  border: none; /* Removes the border */
+  color: black; /* Text color */
+  padding: 10px 20px; /* Adjust the padding to match your design */
+  border-radius: 30px; /* Rounded corners */
+  font-weight: 700; /* Makes the font bold */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Custom styles for the 'Login' button with outline */
+.custom-outline-btn {
+  background-color: transparent; /* Transparent background */
+  color: black; /* Text color */
+  border: 2px solid #F09400; /* Border color */
+  padding: 8px 18px; /* Adjust the padding to match your design */
+  border-radius: 30px; /* Rounded corners */
+  font-weight: 700; /* Makes the font bold */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Ensure that the focus outline is removed for aesthetic purposes */
+.custom-yellow-btn:focus,
+.custom-outline-btn:focus {
+  box-shadow: none;
+}
+
+/* Define the hover effect for the 'Sign-up' button */
+.custom-yellow-btn:hover {
+  background-color: #cc7a00; /* Manually specified darker yellow color */
+  color: white; /* White text on hover */
+}
+
+/* Define the hover effect for the 'Login' button */
+.custom-outline-btn:hover {
+  background-color: #F09400; /* Fills the button on hover */
+  color: white; /* White text on hover */
+}
+/* END of Button styling for the signup and login */
+
+/* Styles for the 'Sign-up' button */
+.signup-button-hero {
+    background-color: #F09400; /* Yellow background color */
+    color: black; /* White text */
+    border-radius: .5rem; /* Bootstrap's 'rounded-2' is .5rem */
+    font-weight: 600; /* Semi-bold text */
+    font-size: 1.25rem; /* 'fs-4' in Bootstrap is 1.25rem */
+    margin-top: 1.5rem; /* 'mt-4' in Bootstrap is 1.5rem */
+    padding: .5rem 1.5rem; /* 'px-4' and 'py-2' in Bootstrap are 1.5rem and .5rem respectively */
+    transition: background-color 0.2s, box-shadow 0.2s; /* Smooth transition for hover and focus */
+  }
+  
+  /* Hover effect */
+  .signup-button-hero:hover {
+    background-color: #cc7a00; /* Darker yellow on hover */
+    color: white; /* White text on hover */
+  }
+  
+  /* Focus effect */
+  .signup-button-hero:focus {
+    background-color: #cc7a00; /* Darker yellow on focus */
+    box-shadow: 0 0 0 0.2rem rgba(240, 148, 0, 0.5); /* A light yellow glow */
+    outline: none; /* Removes the default focus outline */
+  }
+  
 /* Optional: Adjust padding to ensure the line is not too far from text */
 .nav-link {
     padding-bottom: .5rem; /* Or whatever value suits your design */
