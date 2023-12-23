@@ -29,18 +29,55 @@ body {
     font-size: 19px !important;
 }
 
+/* Banner styling */
 #banner {
-    background: url(assets/images/banner.svg);
+    background: url('assets/images/banner.svg') no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
+    min-height: 100vh;
     display: flex;
     align-items: center;
+    min-height: 50vh; /* or more, depending on the amount of content */
+    padding: 40px 0 !important;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+    padding: 0 15px; /* Add some padding on the sides */
+    /* background-color: aquamarine; */
+}
+
+.banner-content {
+    max-width: 600px; /* Adjust the width of the text content */
+    padding-right: 150px; /* Add padding to push the content from the right */
+    margin: 0 auto;
+}
+
+/* Additional styling for the Banner content */
+.banner-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2 !important;
+    margin-bottom: .5rem !important;
+    color: #f09400; /* Adjust the color as needed */
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    color: #666; /* Adjust the color as needed */
+    line-height: 1.6;
+    /* add letter spacing */
+    word-spacing: 0.1rem;
+
 }
 
 .banner-image {
     display: none;
 }
+/* End of Banner Styling */
 
 .card {
     height: 35rem;
@@ -372,6 +409,10 @@ body {
     /* Text color */
     padding-bottom: 5px;
     /* Adjust padding to align the underline */
+    padding: 10px 15px;
+    /* Padding around the text */
+    font-size: 16px;
+    /* Font size */
 }
 
 /* Styles for the active state of the nav-pills */
@@ -385,30 +426,19 @@ body {
     /* Underline color */
 }
 
-/* You may need to adjust the padding and font-size to match your design */
-.nav-pills .nav-link {
-    padding: 10px 15px;
-    /* Padding around the text */
-    font-size: 16px;
-    /* Font size */
-}
-
 /* Additional styling to ensure the pills are inline and spaced correctly */
 .nav-pills {
     display: flex;
     /* Ensures the pills are in a row */
     justify-content: space-between;
     /* Adjusts spacing between pills */
+    flex-wrap: nowrap;
 }
 
 #footer a {
     text-decoration: none;
     color: inherit;
 }
-#banner-text-col {
-    width: 800px !important;
-  }
-
 
 @media (min-width: 992px) {
     /* Adjust for the breakpoint at which the navbar expands */
@@ -452,7 +482,7 @@ body {
     }
 
     .overview-card {
-        height: 28rem;
+        height: 30rem;
     }
 
     .card-title {
@@ -504,32 +534,37 @@ body {
     }
 }
 
-/* Add this new media query for mobile screens */
+/* Banner media query for mobile screens */
 @media (max-width: 575.98px) {
-
-
-    /* Modify the banner styles for mobile */
     #banner {
-        background: none;
-        /* Remove the background image from the content area */
-        text-align: left;
-        /* Center the text for mobile screens */
-        flex-direction: column;
-        /* Stack items vertically on mobile */
-        justify-content: center;
-        /* Center content vertically */
-        padding-bottom: 0;
-        /* Adjust padding as needed */
+        height: auto; /* Adjust the height to fit the content */
+        background: none; /* Removes the background image */
+        flex-direction: column; /* Stacks items vertically */
+        justify-content: flex-start; /* Aligns content to the top */
+        padding-top: 20px; /* Adds some padding at the top */
     }
 
-    /* Add a new class for the image to be inserted below the text */
-    .banner-image {
-        display: block;
-        /* Make the image display as a block-level element */
-        width: 100%;
-        /* Full width */
-        height: auto;
-        /* Maintain aspect ratio */
+    .banner-content {
+        text-align: left; /* Centers the text for mobile screens */
+        padding-right: 0; /* Removes the padding on the right */
 
+    }
+
+    .banner-image {
+        display: block; /* Makes the image visible */
+        width: 100%; /* Full width */
+        height: auto; /* Maintains aspect ratio */
+        margin-top: 20px; /* Adds space between the text and the image */
+    }
+
+    .banner-content h1 {
+        font-size: 1.5rem;
+        /* Adjust the font size as needed */
+        
+    }
+    .banner-content p {
+        font-size: 1rem;
+        /* Adjust the font size as needed */
+        text-align: left;
     }
 }
