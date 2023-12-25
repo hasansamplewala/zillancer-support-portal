@@ -121,9 +121,10 @@ body {
     height: 30px;
 }
 
+
 /* Custom styles for the yellow 'Sign-up' button */
 .custom-yellow-btn {
-    background-color: #F8B31C;
+ 
     /* The yellow background color */
     border: none;
     /* Removes the border */
@@ -143,9 +144,9 @@ body {
 .custom-outline-btn {
     background-color: transparent;
     /* Transparent background */
-    color: #F8B31C;
+    color: #F09400;
     /* Text color */
-    border: 2px solid #F8B31C;
+    border: 2px solid #F09400;
     /* Border color */
     padding: 8px 18px;
     /* Adjust the padding to match your design */
@@ -180,7 +181,7 @@ body {
 /* Button styling for the signup and login */
 /* Custom styles for the yellow 'Sign-up' button */
 .custom-yellow-btn {
-    background-color: #F8B31C;
+    background-color: #F09400;
     /* The yellow background color */
     border: none;
     /* Removes the border */
@@ -203,7 +204,7 @@ body {
     /* Transparent background */
     color: black;
     /* Text color */
-    border: 2px solid #F8B31C;
+    border: 2px solid #F09400;
     /* Border color */
     padding: 8px 19.5px !important;
     min-width: 130px;
@@ -426,6 +427,10 @@ body {
     /* Underline color */
 }
 
+#show-more {
+    display: none !important
+  }
+
 /* Additional styling to ensure the pills are inline and spaced correctly */
 .nav-pills {
     display: flex;
@@ -526,14 +531,16 @@ body {
     .form-inline {
         flex-direction: column;
     }
-}
 
-@media (max-width : 575.98px) {
-    .logo {
+    /* FAQ for mobile screens*/
+    #show-more {
+        display: block !important
+      } 
+
+      .logo {
         width: 150px;
     }
 }
-
 /* Banner media query for mobile screens */
 @media (max-width: 575.98px) {
     #banner {

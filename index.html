@@ -47,7 +47,7 @@
         </ul>
         <!-- Show only for mobile screens -->
         <form class="d-flex form-mobile" role="search">
-          <button class="btn me-2 custom-yellow-btn fw-semibold" type="button">Sign-up</button>
+          <button class="btn me-2 custom-yellow-btn yellow fw-semibold" type="button">Sign-up</button>
           <button class="btn custom-outline-btn fw-semibold" type="button">Login</button>
         </form>
 
@@ -707,7 +707,9 @@
       </div>
       <!-- Show more button -->
       <div class="d-flex justify-content-center">
-        <button id="show-more" class="yellow rounded-2 border-0 fw-semibold fs-4 mt-4 px-4 py-2 signup-button-hero">Show
+        <button 
+        id="show-more" 
+        class="yellow rounded-2 border-0 fw-semibold fs-4 mt-4 px-4 py-2 signup-button-hero">Show
           more</button>
       </div>
     </div>
@@ -844,10 +846,33 @@
       // Get all FAQ items
       var faqItems = document.getElementsByClassName('faq-item');
 
-      // Hide all FAQ items after the third one
-      for (var i = 3; i < faqItems.length; i++) {
-        faqItems[i].style.display = 'none';
+      // Function to show all FAQ items
+      function showAllFAQs() {
+        for (var i = 0; i < faqItems.length; i++) {
+          faqItems[i].style.display = 'block';
+        }
       }
+
+      // Function to hide all FAQ items after the third one
+      function hideExtraFAQs() {
+        for (var i = 3; i < faqItems.length; i++) {
+          faqItems[i].style.display = 'none';
+        }
+      }
+
+      // Function to toggle the display of FAQ items
+      function toggleFAQs() {
+        if (window.innerWidth >= 576) {
+          // Display all FAQs on screens larger than mobile screens
+          showAllFAQs();
+        } else {
+          // Show limited FAQs on mobile screens
+          hideExtraFAQs();
+        }
+      }
+
+      // Initial toggle of FAQs based on screen size
+      toggleFAQs();
 
       // Variable to keep track of whether more FAQs are being shown or not
       var isShowingMore = false;
@@ -859,26 +884,25 @@
       showMoreButton.addEventListener('click', function () {
         if (!isShowingMore) {
           // Show all hidden FAQ items
-          for (var i = 3; i < faqItems.length; i++) {
-            faqItems[i].style.display = 'block';
-          }
+          showAllFAQs();
           // Change button text to "Show less"
           showMoreButton.textContent = 'Show less';
           // Update "isShowingMore"
           isShowingMore = true;
         } else {
-          // Hide all FAQ items after the third one
-          for (var i = 3; i < faqItems.length; i++) {
-            faqItems[i].style.display = 'none';
-          }
+          // Hide extra FAQ items
+          hideExtraFAQs();
           // Change button text back to "Show more"
           showMoreButton.textContent = 'Show more';
           // Update "isShowingMore"
           isShowingMore = false;
         }
       });
+
+      // Add event listener to window resize
+      window.addEventListener('resize', toggleFAQs);
     };
-  </script>
+ </script>
 </body>
 
 </html>
